@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Excel AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h3>Excel AI Assistant</h3>
+
+<div id="settings">
+  <select id="provider">
+    <option value="openai">ChatGPT</option>
+    <option value="gemini">Gemini</option>
+    <option value="claude">Claude</option>
+    <option value="grok">Grok</option>
+    <option value="ollama">Local</option>
+  </select>
+
+  <input id="apiKey" placeholder="Enter API Key"/>
+  <button onclick="saveSettings()">Save</button>
+</div>
+
+<hr/>
+
+<div id="chat" style="height:300px; overflow:auto; border:1px solid #ccc;"></div>
+
+<input id="userInput" placeholder="Ask something..." />
+<button onclick="sendMessage()">Send</button>
+
+<br/><br/>
+<button onclick="useSelection()">Use Excel Selection</button>
+
+<script type="module" src="../js/app.js"></script>
+
+</body>
+</html>
